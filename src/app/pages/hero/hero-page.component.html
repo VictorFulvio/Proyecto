@@ -12,7 +12,7 @@
             <td>{{age()}}</td>
         </tr>
         <tr>
-            <td>Método:</td>
+            <td>Descripción:</td>
             <td>{{getHeroDescription()}}</td>
         </tr>
         <tr>
@@ -21,25 +21,14 @@
         </tr>
     </table>
 </div>
-<!-- Cada botón llama al método correspondiente mediante el evento click -->
+<!-- Los botones llaman al método correspondiente mediante el evento click -->
 <div>
-    <button class="btn btn-primary mx-2" (click)="changeName()">
+    <button class="btn btn-primary mx-2" (click)="modifyName()"> <!--Modifica el nombre del héroe, cada vez que se da click -->
     Cambiar Nombre
     </button>
-    <button class="btn btn-primary mx-2" (click)="changeAge()">
+    <button class="btn btn-primary mx-2" (click)="modifyAge()"> <!--Modifica la edad del héroe, cada vez que se da click -->
         Cambiar Edad
     </button>
-    <!-- <button class="btn btn-primary mx-2" (click)="getHeroDescription()">
-        Mostrar Descripción
-    </button> -->
-    <button class="btn btn-primary mx-2" (click)="reset()">
-        Reset
-    </button>
+    <button (click)="reset()">Reset</button>
 </div>
 
-
-<!-- averiguar si se le pone /hero, llamar a este componente, agregar una estética bonita y que sea funcional -->
-<!-- que salga un nombre de un super heroe, una edad ficticia, un método que extraiga de una señal una descripcion sobre el heroe -->
-<!-- cuando se presione cambiar nombre cambie -->
-<!-- cuando presione cambiar edad cambie -->
-<!-- y aplicar reset-->

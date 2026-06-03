@@ -4,27 +4,27 @@ import { Component, signal } from "@angular/core";
     templateUrl:'./hero-page.component.html',
     styleUrl: './hero-page.component.css'
 })
-export class heroPageComponent{
-    name = signal('Harley Quinn');
-    age = signal('28 años');
+export class HeroPageComponent{
+    name = signal('Punisher');
+    age = signal('40 años');
     description = signal('');
 
-    changeName(){
-        this.name.set('Wonder Woman');
-    }
-    changeAge(){
-        this.age.set('30 años');
+    modifyName() {
+        this.name.set('Daredevil');
+}
+    modifyAge(){
+        this.age.set('35 años');
     }
     getHeroDescription(){
-        if (this.name() == 'Harley Quinn'){
-            return('Harley Quinn era una psiquiatra llamada Harleen Quinzel. Se volvió una villana/antiheroína muy impredecible, divertida y experta usando mazos y bates.');
+        if (this.name() == 'Punisher'){
+            return('Punisher es la identidad justiciera de Francis G. "Frank" Castle (nacido Castiglione), un veterano explorador/francotirador del Cuerpo de Marines de los Estados Unidos en Force Recon.');
         } else{
-            return('Diana Prince es una guerrera amazona con súper fuerza, velocidad y habilidades de combate. Usa el Lazo de la Verdad y lucha por la paz y la justicia.');
+            return(' Matt Murdock / Daredevil, un abogado ciego de día que lucha contra el crimen como un justiciero enmascarado por la noche.');
         }
     }
     reset(){
-        this.name.set('Harley Quinn')
-        this.age.set('28 años')
+        this.name.set('Punisher')
+        this.age.set('40 años')
     }
 }
 
